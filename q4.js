@@ -16,7 +16,7 @@ function q4 () {
       alert(nome+", sua menção foi MS! Você foi aprovado!")
     else if (nota >= 5)
       alert(nome+", sua menção foi MM! Você foi aprovado!")
-    else if (nota >= 5)
+    else if (nota >= 3)
       alert(nome+", sua menção foi MI! Você foi reprovado!")
     else
       alert(nome+", sua menção foi II! Você foi reprovado!")
