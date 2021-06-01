@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="q1">Questão 1</button>
+  <button id="q2">Questão 2</button>
+  <button id="q3">Questão 3</button>
+  <button id="q4">Questão 4</button>
+  <button id="q5">Questão 5</button>
+</body>
+</html>
+
+<script>
+  let q = document.getElementsByTagName("button");
+  q[0].onclick = () =>  {load_js("q1.js")};
+  q[1].onclick = () =>  {load_js("q2.js")};
+  q[2].onclick = () =>  {load_js("q3.js")};
+  q[3].onclick = () =>  {load_js("q4.js")};
+  q[4].onclick = () =>  {load_js("q5.js")};
+
+  function load_js(src)
+   {  
+    var old_script = document.getElementById(src);
+    if (old_script !== null)
+      old_script.parentNode.removeChild(old_script);
+    else {
+      var head= document.getElementsByTagName('head')[0];
+      var script= document.createElement('script');
+      script.src= src;
+      script.id = src;
+      head.appendChild(script);
+    }
+   }
+</script>
